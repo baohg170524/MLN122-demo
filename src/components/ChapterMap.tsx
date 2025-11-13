@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import { chapterLocations } from '../data/chapterLocations.ts';
 import type { NavigationChapter } from '../features/navigation/index.ts';
@@ -63,6 +63,10 @@ export function ChapterMap({ chapters, onSelectChapter }: ChapterMapProps) {
             click: () => onSelectChapter(marker.id),
           }}
         >
+          <Tooltip direction="top" offset={[0, -60]} opacity={1} className="chapter-tooltip">
+            <div className="chapter-tooltip__title">{marker.title}</div>
+            <div className="chapter-tooltip__summary">{marker.summary}</div>
+          </Tooltip>
           <Popup className="chapter-popup">
             <strong>{marker.title}</strong>
             <p>{marker.summary}</p>
