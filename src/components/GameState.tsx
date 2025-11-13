@@ -8,7 +8,7 @@ const initialState: GameState = {
   totalScore: 0,
   visitedLocations: [],
   quizAttempts: {},
-  isBookMode: true,
+  isBookMode: false,
   showQuiz: false,
   currentQuizIndex: 0
 };
