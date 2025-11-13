@@ -35,7 +35,7 @@ export function MapView() {
           <div className="map-stat">
             <div className="map-stat__icon">📖</div>
             <div className="map-stat__content">
-              <span className="map-stat__label">Trang đã đọc</span>
+              <span className="map-stat__label">Trang đã đọc </span>
               <strong className="map-stat__value">{stats.visitedLocations}</strong>
             </div>
           </div>
@@ -43,7 +43,7 @@ export function MapView() {
           <div className="map-stat">
             <div className="map-stat__icon">🧠</div>
             <div className="map-stat__content">
-              <span className="map-stat__label">Câu hỏi đã trả lời</span>
+              <span className="map-stat__label">Câu hỏi đã trả lời </span>
               <strong className="map-stat__value">{stats.quizAttempts}</strong>
             </div>
           </div>
