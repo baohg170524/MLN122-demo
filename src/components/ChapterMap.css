@@ -1,0 +1,104 @@
+.chapter-map {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.35);
+}
+
+.chapter-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 66px;
+  background: radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.95), rgba(17, 24, 39, 0.85));
+  border-radius: 26px 26px 8px 8px;
+  border: 2px solid rgba(148, 163, 184, 0.4);
+  box-shadow:
+    0 20px 30px rgba(15, 23, 42, 0.35),
+    inset 0 2px 12px rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: transform 200ms ease;
+}
+
+.chapter-marker::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: rgba(59, 130, 246, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.25);
+}
+
+.chapter-marker:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.chapter-marker--inprogress {
+  background: radial-gradient(circle at 50% 30%, rgba(252, 211, 77, 0.95), rgba(180, 83, 9, 0.9));
+}
+
+.chapter-marker--inprogress::after {
+  background: rgba(252, 211, 77, 0.9);
+  box-shadow: 0 0 0 6px rgba(252, 211, 77, 0.25);
+}
+
+.chapter-marker--completed {
+  background: radial-gradient(circle at 50% 30%, rgba(52, 211, 153, 0.98), rgba(6, 95, 70, 0.92));
+}
+
+.chapter-marker--completed::after {
+  background: rgba(52, 211, 153, 0.95);
+  box-shadow: 0 0 0 6px rgba(45, 212, 191, 0.28);
+}
+
+.chapter-marker__progress {
+  display: block;
+  line-height: 1.1;
+}
+
+.chapter-popup {
+  max-width: 260px;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.chapter-popup strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.chapter-popup__progress {
+  font-weight: 600;
+  margin: 8px 0;
+  color: #334155;
+}
+
+.chapter-popup__button {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.9);
+  border: 1px solid rgba(125, 211, 252, 0.5);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chapter-popup__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(14, 165, 233, 0.4);
+}
+
